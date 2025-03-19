@@ -1,0 +1,942 @@
+        /* Globalne style */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            width: 100%; /* Logo dostosowane do szerokosci ekranu */
+            max-width: 1330px; /* Maksymalna szerokosc logo */
+            height: auto; /* Proporcjonalna wysokosc */
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1.1rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #333;
+        }
+
+        /* Baner promocyjny */
+        .promo-banner {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .promo-banner h2 {
+            font-size: 2rem;
+        }
+
+        .promo-banner p {
+            font-size: 1.1rem;
+        }
+
+
+
+/* Nawigacja z Flexboxem */
+nav {
+    display: flex;
+    justify-content: center; /* wysrodkowanie linijki w w nawigacji */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #007BFF;
+    text-decoration: #007BFF;
+    padding: 10px 15px;
+    transition: transform 0.3s; /* Dodajemy animacje */
+}
+
+nav a:hover {
+    transform: scale(1.1); /* Powiekszamy przycisk na hover */
+    text-decoration: underline;
+}
+
+/* Uklad ksiazek na stronie ksiegarni */
+.books-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.book-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+
+.book-item p {
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+/* Efekt hover dla kart ksiazeek */
+.book-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Stylizacja przycisku "Kup teraz" */
+.buy-button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.buy-button:hover {
+    transform: scale(1.1);
+    background-color: #005f73;
+}
+
+/* Stylizacja stopki */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Koszyk - stylowanie elementow w koszyku */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cart-container div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Stylizacja przycisku platnosci */
+#checkout-button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-button:hover {
+    background-color: #005f73;
+}
+
+/* Formularz kontaktowy - stylowanie */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Upewniamy sie, ze pola zajmuje szerokosc kontenera */
+}
+
+.contact-form input {
+    height: 40px; /* Dodanie stalej wysokosci dla pol tekstowych */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Umozliwienie zmiany wysokosci pola tekstowego */
+}
+
+.submit-button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005f73;
+    transform: scale(1.1);
+}
+
+
+/* Stylizacja przycisku formularza */
+.submit-button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005f73;
+    transform: scale(1.1); /* Animacja na hover */
+}
+
+/* Responsywnosc dla mniejszych ekranow */
+@media (max-width: 768px) {
+    .books-container {
+        flex-direction: column; /* Zmieniamy uklad na kolumnowy na mniejszych ekranach */
+        align-items: center;
+    }
+    
+    .book-item {
+        max-width: 90%; /* Zwiekszamy szeroksc kart ksiazek na mniejszych ekranach */
+    }
+}
+/* Stylizacja kontenera podsumowania zamowienia */
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Stylizacja formularza zamowienia */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form label {
+    font-weight: bold;
+}
+
+.checkout-form input, .checkout-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
+}
+
+
+/* Stylizacja kontenerow (np. formularzy, podsumowan itp.) */
+.checkout-container, .cart-container, .books-container, .checkout-form {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Pol‚przezroczyste tlo */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Globalne stylowanie body i html */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stylowanie dla glownego kontenera strony */
+main {
+    flex: 1;
+}
+
+/* Stylowanie stopki */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Upewniamy sie, Å¼e stopka jest przyklejona do dolu */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+/* Frosted glass effect dla formularza */
+.frosted-glass {
+    background: rgba(255, 255, 255, 0.3); /* Pol‚przezroczyste biale tlo */
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Efekt rozmycia */
+    -webkit-backdrop-filter: blur(10px); /* Efekt rozmycia dla przegladarek webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Lekko widoczna obwodka */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtelny cien */
+    max-width: 600px;
+    margin: 0 auto;
+    color: #333; /* Kolor tekstu */
+}
+
+
+
+/* Frosted glass effect dla sekcji ksiazek */
+.frosted-glass {
+    background: rgba(255, 255, 255, 0.3); /* Pol‚przezroczyste biale tlo */
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Efekt rozmycia */
+    -webkit-backdrop-filter: blur(10px); /* Efekt rozmycia dla przegladarek webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Lekko widoczna obwodka */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtelny cien */
+    max-width: 900px;
+    margin: 20px auto;
+    color: #333; /* Kolor tekstu */
+}
+
+/* Globalne stylowanie body i html */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox dla glownej zawartosci */
+main {
+    flex: 1;
+}
+
+/* Stylizacja stopki */
+footer {
+    background-color: #333; /* Czarny pasek */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Ustawienie stopki na dole strony */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Stylizacja przyciskÃ³w w sekcji ksizek */
+.buy-button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
+}
+
+/* Stylizacja tla z obrazem background.jpg */
+body {
+    background-image: url('images/background.jpg'); /* sciezka do obrazu */
+    background-size: cover; /* Dopasowanie tlaa do calego ekranu */
+    background-position: center; /* WyÅ›rodkowanie tla */
+    background-attachment: fixed; /* Tlo pozostaje nieruchome podczas przewijania */
+    background-repeat: no-repeat; /* Brak powtarzania obrazu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Stylizacja dla efektu "frosted glass" */
+.frosted-glass {
+    background: rgba(255, 255, 255, 0.3); /* Pol‚przezroczyste biale tlo */
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Efekt rozmycia */
+    -webkit-backdrop-filter: blur(10px); /* Efekt rozmycia dla przegladarek webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Lekko widoczna obwodka */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtelny cien */
+    max-width: 900px;
+    margin: 20px auto;
+    color: #333; /* Kolor tekstu */
+}
+
+/* Globalne stylowanie dla glownego kontenera */
+main {
+    flex: 1;
+}
+
+/* Stylizacja stopki */
+footer {
+    background-color: #007BFF; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Stylizacja przyciskow */
+.submit-button, .buy-button {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-button:hover, .buy-button:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
+}
+ /* Formularz newslettera */
+        .newsletter {
+            background: rgba(255, 255, 255, 0.6); /* Frosted glass effect */
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter input {
+            padding: 10px;
+            width: 70%;
+            font-size: 1rem;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .newsletter button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dostosowanie do malych ekranow */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .promo-banner h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+   /* Stylowanie tabeli */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #34495e; /* Granatowy kolor naglowka */
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        /* Naprzemienne tlo: bialy i niebieski */
+        tr:nth-child(odd) {
+            background-color: #ffffff; /* Biale tlo dla nieparzystych wierszy */
+        }
+
+        tr:nth-child(even) {
+            background-color: #e0f7fa; /* Jasnoniebieskie tlo dla parzystych wierszy */
+        }
+
+        /* Styl hover dla wierszy */
+        tr:hover {
+            background-color: #b3e5fc; /* Jasniejszy niebieski na hover */
+        }
+
+        /* Responsywnosc tabeli */
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+
+/* Style tylko dla strony "O nas" */
+#about-page h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+/* Styl dla paragrafow w sekcji "O nas" */
+#about-page p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Dodanie akcentu do waznych informacji */
+#about-page p strong {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Podzial‚ na sekcje */
+#about-page section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+/* Wyrownanie tekstu z akapitow */
+#about-page section p {
+    margin-bottom: 25px;
+}
+
+
+
+/* Resetowanie marginesow i paddingu */
+* #contact-page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tlo strony (Tylko dla strony kontaktowej) */
+#contact-page {
+    background-color: #f4f4f9;
+}
+
+/* Naglowek */
+#contact-page header {
+    background-color: #f4f4f9;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/* Nawigacja */
+#contact-page nav {
+    margin-top: 10px;
+}
+
+#contact-page nav a {
+    color: #007BFF;
+    text-decoration: #007BFF;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#contact-page nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Glowna sekcja */
+#contact-page main {
+    width: 80%;
+    margin: 30px auto;
+}
+
+
+
+#contact-page .contact-form input,
+#contact-page .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#contact-page .contact-form button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-page .contact-form button:hover {
+    background-color: #34495e;
+}
+
+/* Sekcja z danymi kontaktowymi */
+#contact-page section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#contact-page section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Stopka */
+#contact-page footer {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsywnosc */
+@media screen and (max-width: 768px) {
+    #contact-page main {
+        width: 90%;
+    }
+
+    #contact-page .contact-form {
+        padding: 15px;
+    }
+
+    #contact-page nav a {
+        padding: 8px 15px;
+    }
+}
+
+
+
+/* Resetowanie marginesow i paddingu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Nawigacja */
+#ksiegarnia-page nav {
+    margin-top: 10px;
+}
+
+#ksiegarnia-page nav a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#ksiegarnia-page nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Glowna sekcja */
+#ksiegarnia-page main {
+    width: 80%;
+    margin: 30px auto;
+}
+
+
+
+/* Style tylko dla strony index.html oraz sekcji najlepsze*/
+.ksiegarnia-page .best-books-section .books-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Stylowanie poszczegolnych ksiazek tylko na stronie index.html */
+.ksiegarnia-page .best-books-section .book-item {
+    position: relative;
+    width: 200px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.ksiegarnia-page .best-books-section .book-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Ukrywanie przycisku na poczatku tylko w sekcji najlepsze  na index.html */
+.ksiegarnia-page .best-books-section .book-item button {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5f00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efekt hover dla przycisku w sekcji najlepsze na index.html */
+.ksiegarnia-page .best-books-section .book-item button:hover {
+    background-color: #ff9d3e;
+}
+
+/* Dodatkowe stylowanie w widoku responsywnym tylko na index.html */
+@media (max-width: 768px) {
+    .ksiegarnia-page .best-books-section .book-item {
+        width: 150px;
+    }
+}
+
+
+
+/* Styl dla tla modalnego (ciemne tlo zakrywajace reszte strony) */
+.modal {
+    display: none; /* Domyslnie modal jest ukryty */
+    position: fixed; /* Modal jest wyÅ›wietlany na stae w oknie */
+    z-index: 1; /* Modal ma byÄ‡ na wierzchu */
+    left: 0;
+    top: 0;
+    width: 100%; /* Szerokosc calej strony */
+    height: 100%; /* Wysokosc calej strony */
+    background-color: rgba(0, 0, 0, 0.7); /* Ciemne tlo */
+    transition: opacity 0.3s ease; /* Plynne przejscie przy wyswietlaniu */
+}
+
+/* Styl dla zawartosci okienka modalnego */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Ustala marginesy, aby modal byÅ‚ wysrodkowany */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Szerokosc okienka */
+    max-width: 600px; /* Maksymalna szerokosc*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cien */
+}
+
+/* Styl dla przycisku zamkniecia (X) */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Element, ktory ma sie pojawic */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s forwards;
+}
+
+/* Animacja fade-in */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Poczatkowa pozycja elementu */
+.slide-in {
+    position: relative;
+    left: -100%; /* Poza ekranem */
+    animation: slideInAnimation 0.5s forwards;
+}
+
+/* Animacja przesuniecia z lewej strony */
+@keyframes slideInAnimation {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+
+
+/* Skakanie elementu */
+.bounce {
+    display: inline-block;
+    animation: bounceAnimation 1s infinite;
+}
+
+@keyframes bounceAnimation {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+
+
