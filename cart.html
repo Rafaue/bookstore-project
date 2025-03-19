@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koszyk - Księgarnia XYZ</title>
+<script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo Księgarnia XYZ">
+        </a>
+        <nav>
+            <a href="books.html">Książki</a>
+            <a href="about.html">O nas</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="cart.html">Koszyk</a>
+<div id="cart-count-container">
+    <span id="cart-count">0</span>
+</div>
+
+        </nav>
+    </header>
+
+    
+    <main>
+        <section>
+            <h2>Twoje książki:</h2>
+            <div id="cart-items" class="cart-container frosted-glass">
+                <!-- Tutaj będą dynamicznie dodawane książki -->
+            </div>
+            
+            <div id="cart-summary">
+                <p><strong>Łączna cena:</strong> <span id="total-price">0 zł</span></p>
+                <button id="checkout-button" class="submit-button">Przejdź do płatności</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 Księgarnia XYZ. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+	
+</body>
+</html>

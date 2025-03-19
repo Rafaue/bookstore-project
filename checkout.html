@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koszyk - Księgarnia XYZ</title>
+<script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo Księgarnia XYZ">
+        </a>
+        <nav>
+            <a href="books.html">Książki</a>
+            <a href="about.html">O nas</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="cart.html">Koszyk</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Twoje zamówienie</h2>
+            <div id="order-summary" class="cart-container frosted-glass">
+                <!-- Podsumowanie zamówienia będzie tutaj dynamicznie załadowane -->
+            </div>
+		
+        </section>
+
+        <section>
+            <h2>Dane do wysyłki</h2>
+            <form id="checkout-form" class="checkout-form frosted-glass">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Adres e-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Numer telefonu:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="street">Ulica:</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="city">Miejscowość:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="postal-code">Kod pocztowy:</label>
+                <input type="text" id="postal-code" name="postal-code" required>
+
+                <label for="payment-method">Metoda płatności:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="" disabled selected>Wybierz metodę płatności</option>
+                    <option value="credit-card">Karta kredytowa</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="blik">BLIK</option>
+                </select>
+
+                <button type="submit" class="submit-button">Złóż zamówienie</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 Księgarnia XYZ. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/checkout.js"></script>
+	    <script src="js/script.js"></script>
+		    <script src="js/cart.js"></script>
+</body>
+</html>
