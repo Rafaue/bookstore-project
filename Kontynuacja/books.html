@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Książki - Księgarnia XYZ</title>
+<script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    <header>
+      
+        <a href="index.php">
+            <img src="images/logo.png" alt="Logo Księgarnia XYZ">
+        </a>
+        <nav>
+            <a href="books.html">Książki</a>
+            <a href="about.html">O nas</a>
+            <a href="contact.php">Kontakt</a>
+                        <a href="skup.php">Skup</a>
+            <a href="cart.html">Koszyk</a>
+<div id="cart-count-container">
+    <span id="cart-count">0</span>
+</div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="fade-in">
+    <h2>Nasze Książki</h2>
+</div>
+            <div class="books-container frosted-glass">
+                <!-- Książki z cenami -->
+                <div class="book-item">
+                    <img src="images/ksiazka1.jpg" alt="Książka 1">
+                    <p><strong>Bambo</strong> - Julian Tuwim Literatura dziecięca</p>
+                    <p><strong>Cena:</strong> 19.99 zł</p>
+                    <button class="buy-button" data-book="Bambo" data-price="19.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka2.jpg" alt="Książka 2">
+                    <p><strong>Harry Potter i Kamień Filozoficzny</strong> - J.K. Rowling Literatura młodzieżowa</p>
+                    <p><strong>Cena:</strong> 29.99 zł</p>
+                    <button class="buy-button" data-book="Harry Potter" data-price="29.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka3.jpg" alt="Książka 3">
+                    <p><strong>Obrona</strong> - Remigiusz Mróz Kryminał, Sensacja</p>
+                    <p><strong>Cena:</strong> 39.99 zł</p>
+                    <button class="buy-button" data-book="Obrona" data-price="39.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka4.jpg" alt="Książka 4">
+                    <p><strong>Równonoc</strong> - Ewa Przydryga Kryminał, Sensacja</p>
+                    <p><strong>Cena:</strong> 34.99 zł</p>
+                    <button class="buy-button" data-book="Równonoc" data-price="34.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka5.jpg" alt="Książka 5">
+                    <p><strong>Schronisko, które przestało istnieć</strong> - Sławomir Gortych Kryminał, Sensacja</p>
+                    <p><strong>Cena:</strong> 29.99 zł</p>
+                    <button class="buy-button" data-book="Schronisko" data-price="29.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka6.jpg" alt="Książka 6">
+                    <p><strong>Inwestowanie dla każdego</strong> - Mateusz Samołyk Biznes, Finanse</p>
+                    <p><strong>Cena:</strong> 49.99 zł</p>
+                    <button class="buy-button" data-book="Inwestowanie" data-price="49.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka7.jpg" alt="Książka 7">
+                    <p><strong>Hobbit</strong> - J.R.R. Tolkien Fantasy</p>
+                    <p><strong>Cena:</strong> 24.99 zł</p>
+                    <button class="buy-button" data-book="Hobbit" data-price="24.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka8.jpg" alt="Książka 8">
+                    <p><strong>Władca Pierścieni: Drużyna Pierścienia</strong> - J.R.R. Tolkien Fantasy</p>
+                    <p><strong>Cena:</strong> 34.99 zł</p>
+                    <button class="buy-button" data-book="Drużyna Pierścienia" data-price="34.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka9.jpg" alt="Książka 9">
+                    <p><strong>Gra o Tron</strong> - George R.R. Martin Fantasy</p>
+                    <p><strong>Cena:</strong> 39.99 zł</p>
+                    <button class="buy-button" data-book="Gra o Tron" data-price="39.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka10.jpg" alt="Książka 10">
+                    <p><strong>Zbrodnia i kara</strong> - Fiodor Dostojewski Klasyka</p>
+                    <p><strong>Cena:</strong> 29.99 zł</p>
+                    <button class="buy-button" data-book="Zbrodnia i kara" data-price="29.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka11.jpg" alt="Książka 11">
+                    <p><strong>Wojna i pokój</strong> - Lew Tołstoj Klasyka</p>
+                    <p><strong>Cena:</strong> 39.99 zł</p>
+                    <button class="buy-button" data-book="Wojna i pokój" data-price="39.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka12.jpg" alt="Książka 12">
+                    <p><strong>1984</strong> - George Orwell Dystopia</p>
+                    <p><strong>Cena:</strong> 24.99 zł</p>
+                    <button class="buy-button" data-book="1984" data-price="24.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka13.jpg" alt="Książka 13">
+                    <p><strong>Rok 1984</strong> - George Orwell Dystopia</p>
+                    <p><strong>Cena:</strong> 24.99 zł</p>
+                    <button class="buy-button" data-book="Rok 1984" data-price="24.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka14.jpg" alt="Książka 14">
+                    <p><strong>Fahrenheit 451</strong>  - Ray Bradbury  Dystopia</p>
+                    <p><strong>Cena:</strong> 24.99 zł</p>
+                    <button class="buy-button" data-book="Fahrenheit 451" data-price="24.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka15.jpg" alt="Książka 15">
+                    <p><strong>Duma i uprzedzenie</strong> - Jane Austen Klasyka</p>
+                    <p><strong>Cena:</strong> 29.99 zł</p>
+                    <button class="buy-button" data-book="Duma i uprzedzenie" data-price="29.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka16.jpg" alt="Książka 16">
+                    <p><strong>Opowieść podręcznej</strong> - Margaret Atwood Dystopia</p>
+                    <p><strong>Cena:</strong> 24.99 zł</p>
+                    <button class="buy-button" data-book="Opowieść podręcznej" data-price="24.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka17.jpg" alt="Książka 17">
+                    <p><strong>Buszujący w zbożu</strong> - J.D. Salinger Literatura młodzieżowa</p>
+                    <p><strong>Cena:</strong> 29.99 zł</p>
+                    <button class="buy-button" data-book="Buszujący w zbożu" data-price="29.99">Kup teraz</button>
+                </div>
+                <div class="book-item">
+                    <img src="images/ksiazka18.jpg" alt="Książka 18">
+                    <p><strong>Proces</strong> - Franz Kafka Klasyka</p>
+                    <p><strong>Cena:</strong> 24.99 zł</p>
+                    <button class="buy-button" data-book="Proces" data-price="24.99">Kup teraz</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 Księgarnia XYZ. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
